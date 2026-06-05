@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"git checkout main && git reset --hard origin/main 2>&1 && git status --short | head -10\",\"description\":\"Reset to remote main\"}",
+  "error": "Exit code 1\nerror: The following untracked working tree files would be overwritten by checkout:\n\t.github/workflows/deploy-gh-pages.yml\n\t.gitignore\n\t.omc/state/last-tool-error.json\n\tCLAUDE.md\n\tREADME.md\n\tpackage-lock.json\n\tpackage.json\nPlease move or remove them before you switch branches.\nAborting",
+  "timestamp": "2026-06-05T05:42:57.726Z",
+  "retry_count": 1
+}
