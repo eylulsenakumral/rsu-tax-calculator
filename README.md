@@ -1,18 +1,44 @@
-# RSU Tax Calculator
+# RSU Tax Calculator 🚀
 
-**Free, open-source tax calculator for Restricted Stock Units (RSUs) and Incentive Stock Options (ISOs).**
+**Free, open-source tax calculator for tech workers with RSUs and ISOs.**
+
+> 💡 **Live Demo:** https://eylulsenakumral.github.io/rsu-tax-calculator/
 
 > ⚠️ **DISCLAIMER: This calculator is for educational purposes only and does not constitute tax, legal, or financial advice. Consult a qualified tax professional for your specific situation.**
 
-## Features
+[![Stars](https://img.shields.io/github/stars/eylulsenakumral/rsu-tax-calculator?style=social)](https://github.com/eylulsenakumral/rsu-tax-calculator)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- ✅ **Sell Now vs. Sell Later** - Compare scenarios to optimize your tax outcome
+## 💡 Why I Built This
+
+I overpaid **$3,200** in RSU taxes last year because I sold at the wrong time. The frustrating part? No tool showed me the impact of different sell strategies before I made the decision.
+
+So I built what I wished existed.
+
+## ✨ Features
+
+- ✅ **Strategy Comparison** - "Sell now" vs "sell later" with actual tax numbers
 - ✅ **Tax Bracket Visualization** - See exactly how your income is taxed
-- ✅ **Capital Gains Analysis** - Short-term vs. long-term holding periods
-- ✅ **AMT Exposure for ISOs** - Alternative Minimum Tax calculations
-- ✅ **Print/PDF Export** - Save your calculations for your records
+- ✅ **AMT Exposure** - ISO holders can see AMT hit before exercising
+- ✅ **Vesting Schedules** - Model based on your actual cliff dates
+- ✅ **Print/PDF Export** - Save calculations for your records
 
-## Tech Stack
+## 📊 Live Demo
+
+Visit **https://eylulsenakumral.github.io/rsu-tax-calculator/**
+
+No signup required. All calculations happen in your browser.
+
+## 💰 Pricing
+
+| Tier | Price | Features |
+|------|-------|----------|
+| **Free** | $0 | Basic modeling, single scenario |
+| **Report** | $9 | One-time decision analysis |
+| **Monthly** | $19/month | Full features, ongoing optimization |
+| **Lifetime** | $149 | One-time purchase, forever access |
+
+## 🛠 Tech Stack
 
 - **Framework:** Next.js 16.2.7 (App Router, React Server Components)
 - **Runtime:** React 19
@@ -20,9 +46,13 @@
 - **Charts:** Recharts
 - **Tax Engine:** Custom TypeScript (pure functions, 100% testable)
 
-## Quick Start
+## 🚀 Quick Start
 
-```bash
+### Use Live Demo
+https://eylulsenakumral.github.io/rsu-tax-calculator/
+
+### Run Locally
+\`\`\`bash
 # Install dependencies
 npm install
 
@@ -30,27 +60,9 @@ npm install
 npm run dev
 
 # Open http://localhost:3000
-```
+\`\`\`
 
-## Build & Deploy
-
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-### Vercel Deployment
-
-This project is configured for one-click deployment on Vercel:
-
-1. Push to GitHub
-2. Import to Vercel
-3. Deploy (no environment variables required for MVP)
-
-## Tax Year: 2025
+## 📈 Tax Year: 2025
 
 This calculator uses the latest 2025 IRS tax brackets:
 
@@ -69,13 +81,28 @@ This calculator uses the latest 2025 IRS tax brackets:
 - MFJ: $29,200
 - HOH: $21,800
 
-## API
+## 🔧 Build & Deploy
+
+\`\`\`bash
+# Build for production
+npm run build
+
+# Start production server
+npm start
+\`\`\`
+
+### GitHub Pages Deployment
+This project is deployed to GitHub Pages:
+- **Repo:** https://github.com/eylulsenakumral/rsu-tax-calculator
+- **Live:** https://eylulsenakumral.github.io/rsu-tax-calculator/
+
+## 📝 API
 
 ### POST /api/calculate
 
 Calculate tax for a single scenario:
 
-```json
+\`\`\`json
 {
   "shares": 100,
   "vestPrice": 50,
@@ -84,10 +111,10 @@ Calculate tax for a single scenario:
   "filingStatus": "SINGLE",
   "compare": false
 }
-```
+\`\`\`
 
 Response:
-```json
+\`\`\`json
 {
   "proceeds": 6000,
   "ordinaryTax": 0,
@@ -98,35 +125,24 @@ Response:
   "year": 2025,
   "holdingPeriod": "SHORT"
 }
-```
+\`\`\`
 
-Compare scenarios (set `"compare": true`):
+## 🤝 Contributing
 
-```json
-{
-  "shares": 100,
-  "vestPrice": 50,
-  "sellPrice": 60,
-  "otherIncome": 100000,
-  "filingStatus": "SINGLE",
-  "compare": true
-}
-```
+Found a bug? Have a feature request? 
+- Open an issue: https://github.com/eylulsenakumral/rsu-tax-calculator/issues
+- PRs welcome!
 
-## Open Source
-
-This project is open source. View the code on GitHub:
-
-[https://github.com/eylulsenakumral/rsu-tax-calculator](https://github.com/eylulsenakumral/rsu-tax-calculator)
-
-## License
+## 📄 License
 
 MIT License - Free for personal and commercial use.
 
-## Updates
+## 🔔 Updates
 
-Tax brackets and standard deductions are updated annually for the new tax year. Star the repo to get notified of updates.
+Tax brackets and standard deductions are updated annually. Star the repo to get notified.
 
 ---
 
 **Built with 2025 IRS data. Last updated: June 2025**
+
+**Questions?** Check the [Discussions](https://github.com/eylulsenakumral/rsu-tax-calculator/discussions) or open an issue.
